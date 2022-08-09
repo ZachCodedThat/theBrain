@@ -1,12 +1,14 @@
 import React from "react";
 import "./screen.css";
 
-type CURRENT_PAYMENT = string;
-type OVERPAYMENT = string;
-type OP_FLAG = boolean;
+/* This handles the screen visibile to the user as they are going through the process of purchasing an item
+
+    This could be reworked to fit what ever visualization tool you want to use react was just a quick way to get spun up.
+*/
+
+type CURRENT_PAYMENT = string | number;
 type ITEM_PRICE = string;
-type ITEM_ID = number;
-type CHOICE_ID = string;
+type CHOICE_ID = number;
 type DISPENSE_FLAG = boolean;
 
 interface screenInterface {
@@ -28,6 +30,7 @@ const Screen = ({
     </div>
   ) : (
     <div className="screen">
+      <h3>Input Screen</h3>
       <div className="screen-payment">
         <div className="screen-payment-title">Payment</div>
         <div className="screen-payment-value">{currentPayment}</div>
